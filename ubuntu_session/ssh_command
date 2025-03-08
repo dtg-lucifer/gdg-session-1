@@ -1,0 +1,1 @@
+ssh -i /home/piush/Vagrant/centos_8/.vagrant/machines/default/virtualbox/private_key -p 2222 vagrant@localhost
