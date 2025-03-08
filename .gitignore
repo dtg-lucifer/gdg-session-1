@@ -1,0 +1,8 @@
+node_modules
+
+**.tfvars
+**.tfstate**
+**.terraform
+**.tfplan
+
+**/credentials.json

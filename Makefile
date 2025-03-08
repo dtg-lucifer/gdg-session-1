@@ -38,3 +38,15 @@ install:
 	@sudo apt install nginx
 	@sudo systemctl enable nginx
 	@sudo systemctl start nginx
+
+.PHONY: infra-plan
+infra-plan:
+	@cd infra && terraform plan -out=main.tfplan -var-file=variables.tfvars
+
+.PHONY: infra-apply
+infra-apply:
+	@cd infra && terraform apply "main.tfplan"
+
+.PHONY: infra-destroy
+infra-destroy:
+	@cd infra && terraform destroy -var-file=variables.tfvars
