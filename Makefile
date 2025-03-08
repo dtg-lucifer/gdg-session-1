@@ -21,6 +21,7 @@ build:
 	@sudo cp ./proxy/nginx.conf /etc/nginx/sites-enabled/default
 	@sudo docker network create web || true
 	@./scripts/build.sh
+	@sudo systemctl restart nginx
 
 .PHONY: run
 run: run-green run-blue
