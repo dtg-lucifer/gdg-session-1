@@ -24,7 +24,7 @@ build:
 	@sudo systemctl restart nginx
 
 .PHONY: run
-run: run-green run-blue
+run: build run-green run-blue
 
 .PHONY: stop
 stop: 
